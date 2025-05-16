@@ -1,0 +1,20 @@
+module demux_1_to_8_with_en(
+    input en,      
+    input in,      
+    input [2:0] sel,     
+    output reg [7:0] out);
+
+    always @(*) begin
+        if (en == 1'b0) begin
+            // Якщо EN активний (0), працює демультиплексор
+            out = 8'b00000000;
+            out[sel] = in;
+        end else begin
+            // Якщо EN неактивний (1), всі виходи в високoімпедансному стані
+            out = 8'bzzzz_zzzz;
+        end
+    end
+
+endmodule
+
+
