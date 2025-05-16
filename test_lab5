@@ -1,0 +1,21 @@
+force in 0 0ns
+force en 1 0ns 
+force sel 3'b000 0ns
+
+force en 0 50ns
+
+force in 1 50ns
+
+force sel 3'b000  50ns
+force sel 3'b001 100ns
+force sel 3'b010 150ns
+force sel 3'b011 200ns
+force sel 3'b100 250ns
+force sel 3'b101 300ns
+force sel 3'b110 350ns
+force sel 3'b111 400ns
+
+force en 1 450ns
+
+run 500ns
+
